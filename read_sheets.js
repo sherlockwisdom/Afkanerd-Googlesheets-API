@@ -1,8 +1,8 @@
 const { google } = require('googleapis');
-exports.readSheet = ( spreadSheetId, range, auth ) => {
+exports.readSheet = ( spreadsheetId, range, auth ) => {
 	const sheets = google.sheets({version: 'v4', auth});
 
-	this.sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.get({
 	  spreadsheetId,
 	  range,
 	}, (err, result) => {
