@@ -10,6 +10,7 @@ exports.readSheet = ( spreadsheetId, range, auth ) => {
 	    // Handle error
 	    console.log(err);
 	  } else {
+		console.log( result.data );
 	    const numRows = result.values ? result.values.length : 0;
 	    console.log(`${numRows} rows retrieved.`);
 	  }
