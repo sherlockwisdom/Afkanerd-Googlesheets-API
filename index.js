@@ -11,7 +11,7 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 const TOKEN_PATH = 'token.json';
 
 const spreadSheetId = "1w7PMg4G2pvQePRNixb6CO8h9DQABfts3HnwT70HggPU";
-const range = "A1";
+const range = "Form Responses 1!A:ZZZ";
 
 // Load client secrets from a local file.
 fs.readFile('credentials.json', (err, content) => {
