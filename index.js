@@ -17,7 +17,7 @@ const range = "A1";
 fs.readFile('credentials.json', (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call the Google Sheets API.
-  authorize(JSON.parse(content), READSHEET.readSheet( spreadSheetId ));
+  authorize(JSON.parse(content), READSHEET.readSheet);
 });
 
 /**
@@ -35,7 +35,7 @@ function authorize(credentials, callback) {
   fs.readFile(TOKEN_PATH, (err, token) => {
     if (err) return getNewToken(oAuth2Client, callback);
     oAuth2Client.setCredentials(JSON.parse(token));
-    callback(oAuth2Client);
+    callback(spreadSheetId, range, oAuth2Client);
   });
 }
 
