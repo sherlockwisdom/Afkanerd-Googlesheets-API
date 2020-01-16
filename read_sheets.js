@@ -1,5 +1,5 @@
 const { google } = require('googleapis');
-export.modules = 
+module.exports = 
 function readSheet( spreadSheetId, range ) {
 	this.sheetsService.spreadsheets.values.get({
 	  spreadsheetId,
