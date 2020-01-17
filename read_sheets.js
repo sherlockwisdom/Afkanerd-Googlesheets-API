@@ -12,9 +12,12 @@ exports.readSheet = ( spreadsheetId, range, auth ) => {
 	} else {
 		//TODO: Transform this information into a map, which allows searching
 		let sheetMap = new Map();
-		for(let i =0; i< results.values[0].length ; ++i) {
-			for( let j=1; i< results.values.data.length; ++i ) {}
+		for(let i =1; i< result.values.data.length ; ++i) {
+			for( let j=0; j< result.values.data[i].length; ++j ) {
+				sheetMap.set( result.values.data[0][j], result.values.data[i][j] );	
+			}
 		}
+		console.log( sheetMap );
 				
 		const numRows = result.values ? result.values.length : 0;
 		console.log(`${numRows} rows retrieved.`);
