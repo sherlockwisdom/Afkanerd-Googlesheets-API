@@ -13,7 +13,7 @@ exports.readSheet = ( spreadsheetId, range, auth ) => {
 		//TODO: Transform this information into a map, which allows searching
 		let sheetMap = new Map();
 		//console.log( result.values.data );
-		for(let i =1; i< result.data.values.length ; ++i) {
+		for(let i =1; i< result.data.length ; ++i) {
 			for( let j=0; j< result.data.values[i].length; ++j ) {
 				sheetMap.set( result.data.values[0][j], result.data.values[i][j] );	
 			}
