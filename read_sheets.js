@@ -22,7 +22,7 @@ exports.readSheet = ( spreadsheetId, range, auth ) => {
 		}
 		console.log( sheetMap );
 				
-		const numRows = result.values ? result.values.length : 0;
+		const numRows = result.data.values ? result.data.values.length : 0;
 		console.log(`${numRows} rows retrieved.`);
 	}
 	});	
