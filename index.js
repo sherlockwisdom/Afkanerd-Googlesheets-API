@@ -10,10 +10,10 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 // time.
 const TOKEN_PATH = 'token.json';
 
-//const spreadSheetId = "1w7PMg4G2pvQePRNixb6CO8h9DQABfts3HnwT70HggPU";
-//const range = "'Form Responses 1'!A:ZZZ";
-const spreadSheetId = "1ls0o0tT1xvKphzDekeQMRKLUc2ZQNUldmQe-GuYsyfg";
-const range = "'2020 CHECk TB Operational Plan'!A:ZZZ";
+const spreadSheetId = "1w7PMg4G2pvQePRNixb6CO8h9DQABfts3HnwT70HggPU";
+const range = "'Form Responses 1'!A:ZZZ";
+//const spreadSheetId = "1ls0o0tT1xvKphzDekeQMRKLUc2ZQNUldmQe-GuYsyfg";
+//const range = "'2020 CHECk TB Operational Plan'!A:ZZZ";
 
 // Load client secrets from a local file.
 fs.readFile('credentials.json', (err, content) => {
